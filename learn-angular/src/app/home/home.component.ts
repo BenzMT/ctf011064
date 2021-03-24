@@ -14,5 +14,5 @@ export class HomeComponent {
     
     countNumber() {
         this.count = this.count + 1;
-    }test
+    }
 }
