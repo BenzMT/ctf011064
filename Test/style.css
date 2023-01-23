@@ -1,0 +1,425 @@
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    html, body {
+        width: 210mm;
+        height: 297mm;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Sarabun', sans-serif;
+    font-size: 10pt;
+}
+
+body {
+    background: #e5e4e2; /*platinum*/
+}
+
+sup {
+    font-size: 0.65rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        'header          header          header'
+        'patient-details patient-details sample-details'
+        'tests           tests           tests'
+        'interpret       interpret       interpret'
+        'footer          footer          footer';
+    grid-template-columns: repeat(2, 1fr) 40%;
+    grid-template-rows: 80px 0.4fr 0.5fr 1.1fr 80px;
+    width: 210mm;
+    height: 297mm;
+    padding: 5mm;
+    background: white;
+    box-shadow: 5px 5px 10px grey;
+}
+
+.grid-container > div {
+    background-color: salmon;
+    border: 1px dashed grey;
+}
+
+.item1 {
+    grid-area: header;
+    width: 100%;
+    height: 100%;
+
+    /*---- manual-subgrid : patien details ----*/
+    display: grid;
+    grid-template-areas:
+        'one two three'
+        'four five six'
+        'seven eight nine';
+
+    grid-template-columns: 20px 350px auto;
+    grid-template-rows: 20% auto 20%;
+}
+
+.header:nth-child(1) {
+    grid-area: one;
+}
+.header:nth-child(2) {
+    grid-area: two;
+}
+.header:nth-child(3) {
+    grid-area: three;
+}
+.header:nth-child(4) {
+    grid-area: four;
+}
+.header:nth-child(5) {
+    grid-area: five;
+}
+.header:nth-child(6) {
+    grid-area: six;
+}
+.header:nth-child(7) {
+    grid-area: seven;
+}
+.header:nth-child(8) {
+    grid-area: eight;
+}
+.header:nth-child(9) {
+    grid-area: nine;
+}
+
+.item1 .bolder {
+    font-size: 20pt;
+    font-weight: bolder;
+}
+
+.item2 {
+    grid-area: patient-details;
+    padding: 2mm 0mm;
+    width: 100%;
+    height: 100%;
+
+    /*---- manual-subgrid : patien details ----*/
+    display: grid;
+    grid-template-areas: 
+        'space-1 header header  header       header'
+        'space-1 NAME   space-2 NAME_input   space-3'
+        'space-1 DOB    space-2 DOB_input    space-3'
+        'space-1 AGE    space-2 AGE_input    space-3'
+        'space-1 GENDER space-2 GENDER_input space-3'
+        'space-1 HN     space-2 HN_input   space-3';
+    
+    grid-template-columns: 7px 120px 5px auto 5px;
+    grid-template-rows: auto repeat(5, 22px);
+}
+
+.item1 .text-centre {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.item1 .centre,
+.item2 .centre,
+.item3 .centre {
+    display: flex;
+    align-items: center;
+}
+
+.item1 div,
+.item2 div,
+.item3 div {
+    border: 1px dashed grey;
+}
+
+.col-head{
+    font-weight: bold;
+    font-size: 12pt;
+    padding-left: 10px;
+}
+
+.row-head {
+    font-weight: bold ;
+    color: royalblue;
+    padding-left: 10px;
+}
+
+/*---- patient-details: childs ----*/
+.one:nth-child(1) {
+    grid-area: space-1;
+    background-color: RoyalBlue;
+}
+
+.one:nth-child(2) {
+    grid-area: header;
+}
+
+.one:nth-child(3) {
+    grid-area: NAME;
+}
+
+.one:nth-child(4) {
+    grid-area: space-2;
+}
+
+.one:nth-child(5) {
+    grid-area: NAME_input;
+}
+
+.one:nth-child(6) {
+    grid-area: space-3;
+}
+
+.one:nth-child(7) {
+    grid-area: DOB;
+}
+
+.one:nth-child(8) {
+    grid-area: DOB_input;
+}
+
+.one:nth-child(9) {
+    grid-area: AGE;
+}
+
+.one:nth-child(10) {
+    grid-area: AGE_input;
+}
+
+.one:nth-child(11) {
+    grid-area: GENDER;
+}
+
+.one:nth-child(12) {
+    grid-area: GENDER_input;
+}
+
+.one:nth-child(13) {
+    grid-area: HN;
+}
+
+.one:nth-child(14) {
+    grid-area: HN_input;
+}
+
+.item3 {
+    grid-area: sample-details;
+    padding: 2mm 0mm;
+    width: 100%;
+    height: 100%;
+
+    /*---- manual-subgrid : sample details ----*/
+    display: grid;
+    grid-template-areas: 
+        'space-1 header    header  header          header'
+        'space-1 Collected space-2 Collected_input space-3'
+        'space-1 Recieved  space-2 Recieved_input  space-3'
+        'space-1 Processed space-2 Processed_input space-3'
+        'space-1 Reported  space-2 Reported_input  space-3'
+        'space-1 emp-1     space-2 emp-2           space-3';
+    
+    grid-template-columns: 7px 120px 5px auto 5px;
+    grid-template-rows: auto repeat(5, 22px);
+}
+
+/*---- sample-details: childs ----*/
+.two:nth-child(1) {
+    grid-area: space-1;
+    background-color: RoyalBlue;
+}
+
+.two:nth-child(2) {
+    grid-area: header;
+}
+
+.two:nth-child(3) {
+    grid-area: Collected;
+}
+
+.two:nth-child(4) {
+    grid-area: space-2;
+}
+
+.two:nth-child(5) {
+    grid-area: Collected_input;
+}
+
+.two:nth-child(6) {
+    grid-area: space-3;
+}
+
+.two:nth-child(7) {
+    grid-area: Recieved;
+}
+
+.two:nth-child(8) {
+    grid-area: Recieved_input;
+}
+
+.two:nth-child(9) {
+    grid-area: Processed;
+}
+
+.two:nth-child(10) {
+    grid-area: Processed_input;
+}
+
+.two:nth-child(11) {
+    grid-area: Reported;
+}
+
+.two:nth-child(12) {
+    grid-area: Reported_input;
+}
+
+.two:nth-child(13) {
+    grid-area: emp-1;
+}
+
+.two:nth-child(14) {
+    grid-area: emp-2;
+}
+/* -------- end -------- */
+
+.item4 {
+    grid-area: tests;
+    width: 100%;
+    height: 100%;
+}
+
+.item5 {
+    grid-area: interpret;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    overflow: hidden;
+    padding: 0mm 5mm;
+    
+    background-color: #f2f2f2;
+    border-top: 2px solid royalblue;
+    border-bottom: 2px solid royalblue;
+}
+
+.item5 > p {
+    font-size: 10px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.item5 ul {
+    list-style-position: outside;
+    list-style: none;
+    text-align: justify;
+    padding-left: 10px;
+}
+
+.item5 li {
+    font-size: 10px;
+    margin-bottom: 8px;
+}
+
+.item5 .clear {
+    margin-bottom: 0;
+}
+
+#li01::marker {
+    content: "*  ";
+}
+
+#li02::marker {
+    content: "†  ";
+}
+
+#li03::marker {
+    content: "‡  ";
+}
+
+#li04::marker {
+    content: "§  ";
+}
+
+.item6 {
+    grid-area: footer;
+    width: 100%;
+    height: 100%;
+}
+
+/*---- table style: tests ----*/
+#tests {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tests td,
+#tests th {
+    border: 0;
+    padding: 0;
+    line-height: 22px;
+}
+
+#tests tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tests tr:hover {
+    background-color: #dddddd;
+}
+
+#tests th {
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: royalblue;
+    color: white;
+}
+
+#tests .centre {
+    text-align: center;
+}
+
+#tests .right {
+    text-align: right;
+    padding-right: 95px;
+}
+
+#tests .bolder {
+    font-weight: bolder;
+    font-size: 10pt;
+}
+
+#tests .indent {
+    text-indent: 10px;
+}
+/* -------- end -------- */
+
+/*---- table style: tests ----*/
+#interpret {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    border-collapse: collapse;
+    border-color: black;
+    width: 95%;
+    margin: 10px auto;
+}
+
+#interpret tr,
+#interpret th,
+#interpret td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+#interpret p {
+    font-size: 8.5pt;
+}
+/* -------- end -------- */
