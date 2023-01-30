@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@500&display=swap');
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    html, body {
+        width: 210mm;
+        height: 297mm;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Sarabun', sans-serif;
+    font-size: 10pt;
+}
+
+body {
+    background: #e5e4e2; /*platinum*/
+}
+
+sup {
+    font-size: 0.65rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 210mm;
+    height: 297mm;
+    padding: 5mm;
+    background: white;
+    /* box-shadow: 5px 5px 10px grey; */
+}
+
+.flex-item {
+    width: auto;
+    border: 1px grey dashed; /*should be deleted*/
+}
+
+.item-1 {
+    height: 80px;
+
+    font-size: 20pt;
+    font-weight: bolder;
+}
+
+.item-2 {
+    flex-grow: 0.1;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 2mm 0mm;
+}
+
+/* .item-2 div:last-child {
+    width: 100%;
+} */
+
+.item-2 #header {
+    height: 25px;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.item-2 .indent {
+    padding-left: 10px;
+}
+
+#patient {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    border: 1px grey dashed;/*should be deleted*/
+}
+
+#sample div:nth-last-child(2) {
+    height: 20px;
+}
+
+#patient .row,
+#sample .row {
+    display: flex;
+    flex-direction: row;
+}
+
+#patient .row .indent:first-child,
+#sample .row .indent:first-child {
+    width: 120px;
+    font-weight: bold;
+    color: royalblue;
+}
+
+#sample {
+    display: flex;
+    flex-direction: column;
+
+    width: 40%;
+    height: 100%;
+    border: 1px grey dashed;/*should be deleted*/
+}
+
+#space {
+    width: 5px;
+    background: royalblue;
+}
+
+.item-3 {
+    flex-grow: 0.5;
+}
+
+.item-4 {
+    flex-grow: 1.1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    overflow: hidden;
+    padding: 0mm 5mm;
+
+    background: #f2f2f2;
+    border-top: 2px solid royalblue;
+    border-bottom: 2px solid royalblue;
+}
+
+.item-4 > p {
+    font-size: 10px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.item-4 ul {
+    list-style-position: outside;
+    list-style: none;
+    text-align: justify;
+    padding-left: 10px;
+}
+
+.item-4 li {
+    font-size: 10px;
+    margin-bottom: 8px;
+}
+
+.item-4 .clear {
+    margin-bottom: 0;
+}
+
+.item-5 {
+    height: 80px;
+}
+
+#li-01::marker {
+    content: "*  ";
+}
+
+#li-02::marker {
+    content: "†  ";
+}
+
+#li-03::marker {
+    content: "‡  ";
+}
+
+#li-04::marker {
+    content: "§  ";
+}
+
+/*---- table style: tests ----*/
+#tests {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tests td,
+#tests th {
+    border: 0;
+    padding: 0;
+    line-height: 22px;
+}
+
+#tests tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tests tr:hover {
+    background-color: #dddddd;
+}
+
+#tests th {
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: royalblue;
+    color: white;
+}
+
+#tests .centre {
+    text-align: center;
+}
+
+#tests .right {
+    text-align: right;
+    padding-right: 95px;
+}
+
+#tests .bolder {
+    font-weight: bolder;
+    font-size: 10pt;
+}
+
+#tests .indent {
+    text-indent: 10px;
+}
+/* -------- end -------- */
+
+/*---- table style: tests ----*/
+#interpret {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    border-collapse: collapse;
+    border-color: black;
+    width: 95%;
+    margin: 10px auto;
+}
+
+#interpret tr,
+#interpret th,
+#interpret td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+#interpret p {
+    font-size: 8.5pt;
+}
+/* -------- end -------- */

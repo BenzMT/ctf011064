@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style_old.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@500&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="grid-container">
+        
+        <div class="item1">
+            <div class="header"></div>
+            <div class="header"></div>
+            <div class="header"></div>
+            <div class="header"></div>
+            <div class="header bolder centre text-centre">QuantiFERON-TB Gold Plus</div>
+            <div class="header"></div>
+            <div class="header"></div>
+            <div class="header"></div>
+            <div class="header"></div>
+        </div>
+
+        <div class="item2">
+            <div class="one"></div>
+            <div class="one centre col-head">Patient Details</div>
+            <div class="one centre row-head">Name :</div>
+            <div class="one"></div>
+            <div class="one centre">ทดสอบ เชื่อถือได้ Test</div>
+            <div class="one"></div>
+            <div class="one centre row-head">DOB :</div>
+            <div class="one centre">DOB_input</div>
+            <div class="one centre row-head">Age (d/m/y) :</div>
+            <div class="one centre">Age_input</div>
+            <div class="one centre row-head">Gender :</div>
+            <div class="one centre">Gender_input</div>
+            <div class="one centre row-head">HN :</div>
+            <div class="one centre">HN_input</div>
+        </div>
+        
+        <div class="item3">
+            <div class="two"></div>
+            <div class="two centre col-head">Sample Details</div>
+            <div class="two centre row-head">Date Collected :</div>
+            <div class="two"></div>
+            <div class="two centre">Date_input</div>
+            <div class="two"></div>
+            <div class="two centre row-head">Date Recieved :</div>
+            <div class="two centre">Date_input</div>
+            <div class="two centre row-head">Date Processed :</div>
+            <div class="two centre">Date_input</div>
+            <div class="two centre row-head">Date Reported :</div>
+            <div class="two centre">Date_input</div>
+            <div class="two row-head"> </div>
+            <div class="two"> </div>
+        </div>
+        
+        <div class="item4">
+            <table id="tests">
+                <tr>
+                    <th width="50%">Tests</th>
+                    <th width="30%">Result</th>
+                    <th width="20%">Unit</th>
+                </2r>
+                <tr>
+                    <td class="bolder">QuantiFERON-TB Gold Plus</td>
+                    <td class="right"></td>
+                    <td class="centre"></td>
+                </tr>
+                <tr>
+                    <td id="" class="indent">QuantiFERON Nil Tube</td>
+                    <td class="right">0.05</td>
+                    <td class="centre">IU/mL</td>
+                </tr>
+                <tr>
+                    <td class="indent">QuantiFERON TB1 Ag Tube</td>
+                    <td class="right">0.05</td>
+                    <td class="centre">IU/mL</td>
+                </tr>
+                <tr>
+                    <td class="indent">QuantiFERON TB2 Ag Tube</td>
+                    <td class="right">0.05</td>
+                    <td class="centre">IU/mL</td>
+                </tr>
+                <tr>
+                    <td class="indent">QuantiFERON Mitogen Tube</td>
+                    <td class="right">0.05</td>
+                    <td class="centre">IU/mL</td>
+                </tr>
+                <tr>
+                    <td class="indent bolder">QuantiFERON TB Gold Plus - Interpret.</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="centre bolder">Indeterminate</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="item5">
+            <p class="clear">
+                QuantiFERON-TB Gold Plus results are interpreted as follows:
+            </p>
+            <table id="interpret">
+                <tr>
+                    <th>
+                        <p>Nil</p>
+                        <p>(IU/mL)</p>
+                    </th>
+                    <th>
+                        <p>TB1 minus Nil</p>
+                        <p>(IU/mL)</p>
+                    </th>
+                    <th>
+                        <p>TB2 minus Nil</p>
+                        <p>(IU/mL)</p>
+                    </th>
+                    <th>
+                        <p>Mitogen minus Nil</p>
+                        <p>(IU/mL)<sup>*</sup></p>
+                    </th>
+                    <th>
+                        <p>QuantiFERON-TB Gold Plus</p>
+                        <p>Result</p>
+                    </th>
+                    <th>
+                        <p>Report / Interpretation</p>
+                    </th>
+                </tr>
+                <tr>
+                    <td rowspan="4"><p>&#8804 8.0</p></td>
+                    <td>
+                        <p>&#8805 0.35 and</p>
+                        <p>&#8805 25% of Nil</p>
+                    </td>
+                    <td><p>Any</p></td>
+                    <td rowspan="2"><p>Any</p></td>
+                    <td rowspan="2"><p>Positive<sup>†</sup></p></td>
+                    <td rowspan="2"><p>M. tuberculosis infection likely</p></td>
+                </tr>
+                <tr>
+                    <!-- <td></td> -->
+                    <td><p>Any</p></td>
+                    <td>
+                        <p>&#8805 0.35 and</p>
+                        <p>&#8805 25% of Nil</p>
+                    </td>
+                    <!-- <td></td> -->
+                    <!-- <td></td> -->
+                    <!-- <td></td> -->
+                </tr>
+                <tr>
+                    <!-- <td></td> -->
+                    <td rowspan="2" colspan="2">
+                        <p>< 0.35 or &#8805 0.35</0.35></p>
+                        <p>and < 25% of Nil</p>
+                    </td>
+                    <!-- <td></td> -->
+                    <td><p>&#8805 0.5</p></td>
+                    <td><p>Negative</p></td>
+                    <td><p>M. tuberculosis infection <u>NOT</u> likely</p></td>
+                </tr>
+                <tr>
+                    <!-- <td></td> -->
+                    <!-- <td></td> -->
+                    <!-- <td></td> -->
+                    <td><p>< 0.5</p></td>
+                    <td rowspan="2"><p>Indeterminate<sup>‡</sup></p></td>
+                    <td rowspan="2">
+                        <p>Likelihood of M. tuberculosis</p>
+                        <p>infection cannot be determined</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>> 8.0<sup>§</sup></p></td>
+                    <td colspan="2"><p>Any</p></td>
+                    <!-- <td></td> -->
+                    <td><p>Any</p></td>
+                    <!-- <td></td> -->
+                    <!-- <td></td> -->
+                </tr>
+            </table>
+            <ul>
+                <li id="li01">
+                    Responses to the Mitogen positive control (and occasionally TB Antigens) can be outside the range of the microplate reader.
+                    This has no impact on test results. Values >10 ml are reported by the QFT-Plus software as >10 IU/ml.
+                </li>
+                <li id="li02">
+                    Where M. tuberculosis infection is not suspected, initially positive results can be confirmed by retesting the
+                    original plasma samples in duplicate in the QFT-Plus ELISA. If repeat testing of one or both replicates is positive,
+                    the individual should be considered test positive.
+                </li>
+                <li id="li03">
+                    Refer to the “Troubleshooting” section for possible causes.
+                </li>
+                <li id="li04">
+                    In clinical studies, less than 0.25% of subjects had IFN-γ levels of >8.0 IU/ml for the Nil value.
+                </li>
+            </ul>
+            <p>
+                The Mitogen control generally elicits the greatest IFN-gamma response of the 4 samples from each subject. In some cases, the Mitogen
+                control OD value will be above the limit of the microplate reader; this has no impact on the test interpretation. The IFN-gamma level of the Nil
+                control is considered backgraound and is subtracted from both the TB1 and TB2 results and the Mitogen result for that subject. In clinical studies, less
+                than 0.25% of subjects had IFN-gamma levels of > 8.0 IU/mL for the Nil control.
+            </p>
+            <p>
+                The cutoff for the QuantiFERON-TB Gold Plus test is 0.35 IU/mL above the Nil control (and TB1 or TB2 minus Nil is &#8805 25% of the Nil control)
+                for either or both TB tubes. Individuals displaying a response to either or both of the TB tubes above this cutoff are likely infected with M. tuberculosis.
+            </p>
+            <p class="clear">
+                The magnitude of the measured IFN-γ level cannot be correlated to stage or degree of infection,
+                level of immune responsiveness, or likelihood for progression to active disease. A positive TB
+                response in persons who are negative to Mitogen is rare, but has been seen in patients with
+                TB disease. This indicates the IFN-γ response to TB Antigen is greater than that to Mitogen,
+                which is possible as the level of Mitogen does not maximally stimulate IFN-γ production by
+                lymphocytes.
+            </p>
+        </div>
+        <div class="item6">footer</div>
+
+    </div>
+</body>
+</html>
