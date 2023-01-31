@@ -37,7 +37,7 @@ sup {
     height: 297mm;
     padding: 5mm;
     background: white;
-    /* box-shadow: 5px 5px 10px grey; */
+    box-shadow: 5px 5px 10px grey;
 }
 
 .flex-item {
@@ -71,9 +71,9 @@ sup {
     font-weight: bold;
 }
 
-.item-2 .indent {
+/* .item-2 .indent {
     padding-left: 10px;
-}
+} */
 
 #patient {
     display: flex;
@@ -91,6 +91,8 @@ sup {
 #sample .row {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
 }
 
 #patient .row .indent:first-child,
