@@ -23,7 +23,7 @@
                 <div id="header" class="indent">Patient Details</div>
                 <div class="row">
                     <div class="indent">Name :</div>
-                    <div class="indent">ทดสอบ เชื่อถือได้ Test</div>
+                    <div class="indent">{{inputNAME}}</div>
                 </div>
                 <div class="row">
                     <div class="indent">DOB :</div>
@@ -49,23 +49,23 @@
                 <div id="header" class="indent">Sample Details</div>
                 <div class="row">
                     <div class="indent">Date Collected :</div>
-                    <div class="indent">{{inputHN}}</div>
+                    <div class="indent">{{inputCollected}}</div>
                 </div>
                 <div class="row">
                     <div class="indent">Date Recieved :</div>
-                    <div class="indent">{{inputHN}}</div>
+                    <div class="indent">{{inputRecieved}}</div>
                 </div>
                 <div class="row">
                     <div class="indent">Date Processed :</div>
-                    <div class="indent">{{inputHN}}</div>
+                    <div class="indent">{{inputProcessed}}</div>
                 </div>
                 <div class="row">
                     <div class="indent">Date Reported :</div>
-                    <div class="indent">{{inputHN}}</div>
+                    <div class="indent">{{inputReported}}</div>
                 </div>
                 <div class="row">
                     <div class="indent"></div>
-                    <div class="indent" style="flex-grow: 1; background: grey;"></div>
+                    <div class="indent"></div>
                 </div>
             </div>
 
@@ -275,7 +275,20 @@
                 lymphocytes.
             </p>
         </div>
-        <div class="flex-item item-5">5</div>
+        <div class="flex-item item-5">
+            <div class="signature">
+                <div>Reported by</div>
+                <div></div>
+                <div>Date</div>
+                <div></div>
+            </div>
+            <div class="signature">
+                <div>Approved by</div>
+                <div></div>
+                <div>Date</div>
+                <div></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
