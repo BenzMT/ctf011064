@@ -53,27 +53,20 @@ sup {
     height: 80px;
 }
 
-.item-1>*:first-child {
+.item-1 > *:first-child {
     height: 40px;
     width: 320px;
     display: flex;
     justify-content: center;
     align-items: center;
-
     border: 2px royalblue solid;
-    /* border-image-slice: 1;
-    border-image-source:
-        linear-gradient(
-            to right,
-            white 0 5%,
-            royalblue); */
 
     text-align: center;
     font-size: 18pt;
     font-weight: bolder;
 }
 
-.item-1>*:last-child {
+.item-1 > *:last-child {
     height: 40px;
     display: flex;
     flex: 1;

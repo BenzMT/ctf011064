@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    
-    <title>QuantiFERON-TB Report</title>
-    
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='css/style.css') }}">
+
+    <title>QFT-Plus Report : {{patient.id}}</title>
+
 </head>
+
 <body>
+    
+    <script>
+        result = document.getElementsByClassName("centre interpret-result");
+        result[0].style.color = "red";
+    </script>
 
     <div class="container">
 
@@ -17,11 +24,11 @@
             <div>QuantiFERON-TB Gold Plus</div>
             <div>Patient Report</div>
         </div>
-        
+
         <div class="flex-item item-2">
 
             <div id="space"></div>
-            
+
             <div id="patient">
                 <div id="header" class="indent">Patient Details</div>
                 <div class="row">
@@ -47,7 +54,7 @@
             </div>
 
             <div id="space"></div>
-            
+
             <div id="sample">
                 <div id="header" class="indent">Sample Details</div>
                 <div class="row">
@@ -114,7 +121,7 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td class="centre interpret-result">-- Negative --</td>
+                    <td class="centre interpret-result">-- {{patient.result}} --</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -242,13 +249,17 @@
             </table>
             <ul>
                 <li id="li-01">
-                    Responses to the Mitogen positive control (and occasionally TB Antigens) can be outside the range of the
+                    Responses to the Mitogen positive control (and occasionally TB Antigens) can be outside the range of
+                    the
                     microplate reader.
-                    This has no impact on test results. Values >10 ml are reported by the QFT-Plus software as >10 IU/ml.
+                    This has no impact on test results. Values >10 ml are reported by the QFT-Plus software as >10
+                    IU/ml.
                 </li>
                 <li id="li-02">
-                    Where M. tuberculosis infection is not suspected, initially positive results can be confirmed by retesting the
-                    original plasma samples in duplicate in the QFT-Plus ELISA. If repeat testing of one or both replicates is
+                    Where M. tuberculosis infection is not suspected, initially positive results can be confirmed by
+                    retesting the
+                    original plasma samples in duplicate in the QFT-Plus ELISA. If repeat testing of one or both
+                    replicates is
                     positive,
                     the individual should be considered test positive.
                 </li>
@@ -260,18 +271,23 @@
                 </li>
             </ul>
             <p>
-                The Mitogen control generally elicits the greatest IFN-γ response of the 4 samples from each subject. In some
+                The Mitogen control generally elicits the greatest IFN-γ response of the 4 samples from each subject. In
+                some
                 cases, the Mitogen
-                control OD value will be above the limit of the microplate reader; this has no impact on the test interpretation.
+                control OD value will be above the limit of the microplate reader; this has no impact on the test
+                interpretation.
                 The IFN-γ level of the Nil
-                control is considered backgraound and is subtracted from both the TB1 and TB2 results and the Mitogen result for
+                control is considered backgraound and is subtracted from both the TB1 and TB2 results and the Mitogen
+                result for
                 that subject. In clinical studies, less
                 than 0.25% of subjects had IFN-γ levels of > 8.0 IU/mL for the Nil control.
             </p>
             <p>
-                The cutoff for the QuantiFERON-TB Gold Plus test is 0.35 IU/mL above the Nil control (and TB1 or TB2 minus Nil is
+                The cutoff for the QuantiFERON-TB Gold Plus test is 0.35 IU/mL above the Nil control (and TB1 or TB2
+                minus Nil is
                 &#8805 25% of the Nil control)
-                for either or both TB tubes. Individuals displaying a response to either or both of the TB tubes above this cutoff
+                for either or both TB tubes. Individuals displaying a response to either or both of the TB tubes above
+                this cutoff
                 are likely infected with M. tuberculosis.
             </p>
             <p class="clear">
@@ -299,4 +315,5 @@
         </div>
     </div>
 </body>
+
 </html>
